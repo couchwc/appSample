@@ -1,0 +1,106 @@
+body{
+    /*ALL*/
+    background-color:#bbbbbb;
+}
+.shadow{
+    /*ALL*/
+    box-shadow:3px 3px 0px 0px #cc0000;
+}
+/* unvisited link */
+a:link, a:visited {
+    color: #cc0000;
+}
+
+/* mouse over link */
+a:hover, a:active {
+    color: #777777;
+}
+header {
+    /*ALL*/
+    background-color:#000000;
+    border-radius:10px;
+    color:white;
+    padding:10px;
+    text-align:center;
+}
+nav {
+    /*ALL*/
+    background-color:#eeeeee;
+    border-radius:0px 0px 10px 10px;
+    line-height:30px;
+    margin:0px auto;
+    width:-webkit-fit-content;
+    width:-moz-fit-content;
+    width:fit-content;
+}
+nav li{
+    /*ALL*/
+    display:inline-block;
+    padding:5px;
+}
+nav a:link, nav a:visited {
+    /*ALL*/
+    background-color:#eeeeee;
+    color:#cc0000;
+    display:block;
+    font-weight:bold;
+    padding:4px;
+    text-align:center;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+nav a:hover, nav a:active {
+    /*ALL*/
+    color:#000000;
+}
+section {
+    /*ALL*/
+    background-color:#eeeeee;
+    border-radius:10px 40px;
+    margin:10px auto;
+    padding:10px;
+    width:90%;
+}
+section #secWelcome h1, section #secWelcome p{
+    text-align:center;
+}
+section #secWelcome #secWelcomeImage img{
+    border-radius:10px;
+    box-shadow:3px 3px 0px 0px #777777;
+    height:auto;
+    width:auto;
+}
+section #secHours h1, section #secHours h3, section #secHours p{
+    /*HOME*/
+    text-align:center;
+}
+section #secHours hr{
+    /*HOME*/
+    color:#bbbbbb;
+    background-color:#bbbbbb;
+    border-color:#bbbbbb;
+}
+section #secAddress p{
+    /*HOME*/
+    text-align:center;
+}
+section #secAbout{
+    text-align:center;
+}
+section .secSocialMedia{
+    /*ABOUT*/
+    padding:12px;
+}
+section #secMenu{
+    /*MEN*/
+    padding:12px;
+}
+footer {
+    /*ALL*/
+    background-color:#000000;
+    border-radius:10px;
+    color:white;
+    clear:both;
+    padding:5px;
+    text-align:center;
+}
