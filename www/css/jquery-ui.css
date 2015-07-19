@@ -830,7 +830,7 @@ body .ui-tooltip {
 /* Component containers
 ----------------------------------*/
 .ui-widget {
-	font-family: Verdana,Arial,sans-serif;
+	font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
 	font-size: 1.1em;
 }
 .ui-widget .ui-widget {
@@ -840,16 +840,21 @@ body .ui-tooltip {
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
-	font-family: Verdana,Arial,sans-serif;
+	font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
 	font-size: 1em;
 }
 .ui-widget-content {
 	border: 1px solid #aaaaaa;
+/*
 	background: #ffffff url("../images/ui-bg_flat_75_ffffff_40x100.png") 50% 50% repeat-x;
 	color: #222222;
+*/
+    
+    background: #ad0000;
+    color: #ffffff;
 }
 .ui-widget-content a {
-	color: #222222;
+	color: #ffffff;
 }
 .ui-widget-header {
 	border: 1px solid #aaaaaa;
@@ -886,7 +891,7 @@ body .ui-tooltip {
 	border: 1px solid #999999;
 	background: #dadada url("../images/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x;
 	font-weight: normal;
-	color: #212121;
+	color: #ad0000;
 }
 .ui-state-hover a,
 .ui-state-hover a:hover,
@@ -905,7 +910,7 @@ body .ui-tooltip {
 	border: 1px solid #aaaaaa;
 	background: #ffffff url("../images/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x;
 	font-weight: normal;
-	color: #212121;
+	color: #ad0000;
 }
 .ui-state-active a,
 .ui-state-active a:link,
