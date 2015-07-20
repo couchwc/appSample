@@ -1,54 +1,422 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+	Read Only by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+    *EDIT*
+    This is my edited version
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+    **NOTES**
+    Need a panoramic picture to replace the banner...
+    Need to look at the font of the accordion section aka menu
+    Need to look at the length of the accordion...
+        Notes: heightStyle...wtf! always jumps down to one line for anything except auto
 -->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div id="navbar">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="html5upRO.html">HTML5 UP</a></li>
-                <li><a href="html5MyCopy.html">HTML5 UP - My Copy</a></li>
-            </ul>
-        </div>
+	<head>
+		<title>Granville Inn</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="css/editMain.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+        <!-- Accordion style sheet -->
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="img/Gville_Logo.jpg" alt="" /></span><!-- orininal: 279x279 -->
+					<h1 id="logo"><a href="html5MyCopy.html">Granville Inn</a></h1>
+					<p>
+                        Est. 1939<br>This is the offical page of the Granville Inn!<br>The offical bar of the students of the University of Louisville!
+                    </p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">About</a></li>
+						<li><a href="#two">Menu</a></li>
+						<li><a href="#three">Other Information</a></li>
+						<li><a href="#four">Contact</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://twitter.com/granville_inn" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://instagram.com/granville_inn/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                        <!--<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>-->
+                        <!--<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>-->
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="container">
+									<header class="major">
+										<h2>The Granville Inn</h2>
+										<p>
+                                            A staple of Old Louisville and a favorite of the students at UofL.
+                                        </p>
+									</header>
+                                    <h4>Bar/Kitchen Hours</h4>
+                                    <p>
+                                        The bar opens in the morning at eleven Monday through Saturday and then on Sunday at one in the afternoon. The kitchen is open everyday from the time we open until midnight. The bar stays open until four in the morning every night.
+                                    </p>
+                                    <h4>Happy Hour</h4>
+                                    <p>
+                                        Join us during happy hour! Monday through Friday starting at three in the afternoon.
+                                    </p>
+                                    <h4>Gameday Specials</h4>
+                                    <h5>C-A-R-D-S CARDS!</h5>
+                                    <p>
+                                        Come in and cheer on the Cards! Football, Basketball, Baseball! If the Cards are on, we will be showing them! And do not forget about our drink specials!
+                                    </p>
+                                    <h5>Are You Ready For Some Football!</h5>
+                                    <p>
+                                        The Granville is the place to watch college football on Saturday and the NFL on Sunday and Monday! Again do not forget to ask about our specials!
+                                    </p>
+                                    <h4>Trivia!</h4>
+                                    <p>
+                                        Trivia is held on Tuesday evenings and starts at seven. Come outsmart the competition while enjoying our drink specials and dollar slices of pizza!
+                                    </p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<h3>Menu</h3>
+									<p>
+                                        Take a minute and look at what we have behind the bar and inside the kitchen!
+                                    </p>
+                                    
+                                    <div id="accordion" class="ui-accordion ui-widget ui-helper-reset" role="tablist">
+                                        <!--BEER-->
+                                        <h3 class="ui-accordion-header ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon ui-icon-triangle-1-e"></span>Beer</h3>
+                                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel1" aria-hidden="true" style="display:none;">
+                                            <p>
+                                                Draft Beers:
+                                                <br><br>Budweiser
+                                                <br>Bud Light
+                                                <br>Bells Two Hearted Ale
+                                                <br>Newcastle Brown Ale
+                                                <br>Sierra Nevada Pale Ale
+                                                <br>New Belgium Fat Tire Amber Ale
+                                                <br>SweetWater 420 Extra Pale Ale
+                                                <br>Guinness
+                                                <br>Blue Moon Belgian White Belgian-Style Wheat Ale
+                                                <br>Miller Light
+                                                <br>Left Hand Milk Stout
+                                                <br>Cumberland Red Ale
+                                                <br>Stella Artois
+                                                <br>Deschutes Chainbreaker White IPA
+                                                <br>Kona Big Wave Golden Ale
+                                                <br>Franziskaner Hefe-Weisse
+                                                <br>3 Floyds Gumballhead Alpha King
+                                            </p>
+                                            <p>Come ask about our Beer of the Month and check out our bottles of beer in the Bevador!</p>
+                                        </div>
+                                        <!--LIQUOR-->
+                                        <h3 class="ui-accordion-header ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon ui-icon-triangle-1-e"></span>Liquor</h3>
+                                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel1" aria-hidden="true" style="display:none;">
+                                            <p>
+                                                Vodka:
+                                                <br><br>Ketel One, Absolut, Grey Goose
+                                            </p>
+                                            <p>
+                                                Rum:
+                                                <br><br>Bacardi, Parrot Bay, Captain Morgan, Malibu, Sailor Jerry, RumChata
+                                            </p>
+                                            <p>
+                                                Tequila:
+                                                <br><br>Jose Cuervo, Patron, Herradura
+                                            </p>
+                                            <p>
+                                                Bourbon and Whiskey:
+                                                <br><br>Jim Beam, Jack Daniels, Woodford Reserve, Knob Creek, Bulleit Bourbon, Crown Royal, Angel's Envy, Eagle Rare, Four Roses, Willet, Buffalo Trace, Maker's Mark, Old Forester, Old Weller Antique, Red Stag, Wild Turkey, American Honey, Basil Hayden's
+                                            </p>
+                                        </div>
+                                        <!--WINE-->
+                                        <h3 class="ui-accordion-header ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-5" aria-controls="ui-id-6" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon ui-icon-triangle-1-e"></span>Wine</h3>
+                                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-6" aria-labelledby="ui-id-5" role="tabpanel1" aria-hidden="true" style="display:none;">
+                                            <p>Barefoot Wine
+                                            <br><br>White: Chardonnay and Moscato
+                                            <br>Red: Merlot and Cabernet Sauvigon
+                                            <br>Blush: White Zinfadel</p>
+                                        </div>
+                                        <!--STARTERS-->
+                                        <h3 class="ui-accordion-header ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-7" aria-controls="ui-id-8" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon ui-icon-triangle-1-e"></span>Starters</h3>
+                                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-8" aria-labelledby="ui-id-7" role="tabpanel1" aria-hidden="true" style="display:none;">
+                                            <p>Chicken Strips - $7.50<br>Hand breaded strips of chicken served with a side and choice of BBQ, Honey Mustard, or Ranch.</p>
+                                            <p>Jalapeno Poppers - $5.75<br>Hot Jalapenos stuffed with cheese and deep fried to golden brown.</p>
+                                            <p>Mozzerella Cheese Sticks - $5.75<br>Deep fried to golden brown and served with marinara sauce.</p>
+                                            <p>Pepper Jack Cheese Balls - $5.95<br>Sixteen golden fried peper jack cheese balls served with our homeade horseradish ranch sauce.</p>
+                                            <p>Basket O Rings - $5.25<br>A basket of Granville's own hand-breaded onion rings served with cajun mayo.</p>
+                                            <p>French Fries - $2.95<br>A plate full of golden brown french fries.</p>
+                                            <p>Tator Skins - $5.75<br>Topped with mozzarella and bits of bacon served with sour cream.</p>
+                                            <p>Cheesy Fries - $5.25<br>A hefty portion of fries topped with mozzarella, cheddar, and bits of bacon served with ranch.</p>
+                                            <p>Cheesy Bread - $6.95<br>Our pizza dough smothered with mozzarella served with marinara sauce.</p>
+                                            <p>Bread Sticks - $5.95<br>Hand tossed, twisted and baked to perfection served with marinara sauce.</p>
+                                        </div>
+                                        <!--BURGERS-->
+                                        <h3 class="ui-accordion-header ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-9" aria-controls="ui-id-10" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon ui-icon-triangle-1-e"></span>Burgers</h3>
+                                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-10" aria-labelledby="ui-id-9" role="tabpanel1" aria-hidden="true" style="display:none;">
+                                            <p>Granville Burger - $7.50<br>An all American burger topped with lettuce, tomato, onion, and mayo. Served with cheese upon request and a side.</p>
+                                            <p>Bambino Burger - $7.75<br>This burger will satisfy your Italian crave. Topped with marinara sauce and mozzarella cheese. Served with a side.</p>
+                                            <p>Tijuana Burger - $7.75<br>This burger brings the heat. Topped with pepper jack cheese and jalapeno peppers. Served with a side.</p>
+                                            <p>Bacon Cheddar Burger - $7.95<br>A true classic. This burger is topped with bacon and cheddar cheese and served with a side.</p>
+                                            <p>Bacon Blue Burger - $7.95<br>A twist on a the classic bacon cheese burger, topped with bacon and blue cheese crumbles. Served with a side.</p>
+                                            <p>Charlie Burger - $7.75<br>This burger will make your mouth water! Topped with sauteed mushrooms and onions. Served with a side.</p>
+                                        </div>
+                                        <!--THE GRILL-->
+                                        <h3 class="ui-accordion-header ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-11" aria-controls="ui-id-12" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon ui-icon-triangle-1-e"></span>The Grill</h3>
+                                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-12" aria-labelledby="ui-id-11" role="tabpanel1" aria-hidden="true" style="display:none;">
+                                            <p>Grilled Chicken Sandwich - $7.25<br>A breast filet grilled and served with lettuce, tomato, onion, and mayo. Served with a side.</p>
+                                            <p>Sicilian Grill - $7.75<br>A grilled chicken breast topped with mozzarella cheese and marinara sauce. Served with a side.</p>
+                                            <p>Ragin' Cajun Fowl - $7.75<br>This bird is straight from Louisiana, topped with lettuce, tomato, and cajun mayo. Served with a side.</p>
+                                            <p>TEXMEX Chicken Sandwich - $7.75<br>This is a border classic. Topped with melted pepper jack cheese and jalapenos. Served with a side.</p>
+                                            <p>Finger Lickin' Fowl - $7.75<br>This breast is hand breaded and deep fried. Topped with lettuce and tomato. Served with a side.</p>
+                                            <p>Bacon Cheddar Chicken - $7.95<br>This is just like it sounds, a grilled chicken breast toppen with crispy bacon and cheddar cheese. Served with honey mustard and a side.</p>
+                                            <p>Bratwurst - $4.95<br>A big brat served on rye bread, with sauerkraut, and with a side.</p>
+                                            <p>Grilled Tuna Steak - Market Cost<br>A grilled piece of tuna topped with lettuce and served with cajun mayo and a side.</p>
+                                            <p>Phish Sandwich - $7.75<br>Deep fried cod, topped with lettuce, and served with plenty of tartar sauce. Served with a side.</p>
+                                            <p>Vegan Burger - $6.95<br>Our version of the "Garden Burger." (black bean patty)</p>
+                                            <p>BLT - $6.25<br>A simple classic. Bacon, lettuce, and tomato served with mayo and a side.</p>
+                                            <p>Cheesy Tomato Grill - $5.50<br>A twist on the simple grilled cheese sandwich. Includes a tomato, mozzarella, cheddar, and American cheeses. Served with a side.</p>
+                                            <p>Baked Ham and Cheese - $6.95<br>Thin slices of ham stacked under your choice of cheese. Served hot or cold and with a side.</p>
+                                            <p>Backed Turkey and Cheese - $6.95<br>Thin slices of turkey stacked under your choice of cheese. Served hot or cold and with a side.</p>
+                                            <p>Fat Boy Italian Club - $4.75<br>Our traditional club with a layer of pepperoni and cheddar cheese. Served with italian dressing and a side.</p>
+                                            <p>Club - $7.25<br>Thin slices of turkey and ham stacked under bacon, lettuce, tomato, and served with mayo, cheese upon request, and a side.</p>
+                                        </div>
+                                        <!--SALADS-->
+                                        <h3 class="ui-accordion-header ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-13" aria-controls="ui-id-14" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon ui-icon-triangle-1-e"></span>Salads</h3>
+                                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-14" aria-labelledby="ui-id-13" role="tabpanel1" aria-hidden="true" style="display:none;">
+                                            <p>House Salad - $4.95<br>A plate full of chopped lettuce, tomatos, onions, carrots, black olives, mushrooms, and mozzarela cheese. Served with a choice of dressing.</p>
+                                            <p>Chef Salad - $6.95<br>A plate full of chopped lettuce, tomatos, onions, carrots, black olives, mushrooms, and mozzarela cheese. Topped with pieces of ham and turkey. Served with a choice of dressing.</p>
+                                            <p>Grilled Chicken Salad - $7.50<br>A plate full of chopped lettuce, tomatos, onions, carrots, black olives, mushrooms, and mozzarela cheese. Topped with slices of grilled chicken. Served with a choice of dressing.</p>
+                                            <p>Tuna Steak Salad - $9.50<br>A plate full of chopped lettuce, tomatos, onions, carrots, black olives, mushrooms, and mozzarela cheese. Topped with a grilled tuna steak. Served with a choice of dressing.</p>
+                                        </div>
+                                        <!--PIZZA-->
+                                        <h3 class="ui-accordion-header ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-15" aria-controls="ui-id-16" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon ui-icon-triangle-1-e"></span>Pizza</h3>
+                                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-16" aria-labelledby="ui-id-15" role="tabpanel1" aria-hidden="true" style="display:none;">
+                                            <p>BBQ Chicken Pizza - 10" N/A | 14" $19.95 | 18" $25.50<br>Grilled BBQ chicken with special BBQ marinar and your choice of vegetables topped with mozzeralla cheese.</p>
+                                            <p>Meat Man Cometh - 10" $13.50 | 14" $19.95 | 18" $25.50<br>So much meat! It has sausage, ham, bacon, pepperoni, and hamburger topped with mozzeralla cheese.</p>
+                                            <p>The Garden of Eaton - 10" $12.50 | 14" $18.95 | 18" $24.50<br>So many veggies! It has onion, green peper, black olives, mushrooms, tomatoes, and spinach topped with mozzerella cheese.</p>
+                                            <p>The Big Cheese - 10" $11.50 | 14" $17.95 | 18" $24.50<br>So many cheeses! It has mozzeralla, pepper jack, cheddar, and monterray jack cheese.</p>
+                                            <p>Rajun Cajun Pizza - 10" N/A | 14" $19.95 | 18" $25.50<br>Blackened chicken, spinach, bacon, and red onion with a white suace topped with mozzeralla cheese.</p>
+                                            <p>Bratwurst and Sauerkraut Pizza - 10" $12.00 | 14" $16.95 | 18" $25.50<br>Definetly a unique experience! Sliced up pieces of grilled brautwurst and sauerkraut topped with mozzeralla cheese.</p>
+                                            <p>Sausagefest - 10" $13.50 | 14" $19.95 | 18" $25.50<br>Pepperoni, sausage, and sliced pieces of grilled brautwurst topped with mozzeralla cheese.</p>
+                                            <p>Bacon Cheddar Buger Pizza with Fries - 10" $13.50 | 14" $19.95 | 18" $25.50<br>Our grilled burger, bacon, and chopped up fries topped with cheddar and mozzeralla cheese.</p>
+                                            <p>Classic Cheese Pizza - 10" $8.00 | 14" $10.00 | 18" $13.00<br>A true classic! Just the dough, marinara, and mozzeralla cheese.</p>
+                                            <p>Build Your Own Pizza - 10" $8.00 | 14" $10.00 | 18" $13.00<br>Start with our classic cheese and build your perfect pizza! Choose from our toppings below!</p>
+                                            <p>Toppings: Pepperoni, Itallian Sausage, Ham, Bacon, Hamburger, Grilled Brautwurst, Sauerkraut, Pineapples, Banana Peppers, Green Peppers, Jalapenos, Mushrooms, Tomatos, Onions, Sauteed Onions, Black Olives, Spinach, Extra Cheese.</p>
+                                            <p>Toppings Pries: - 10" $1.50 | 14" $2.00 | 18" $2.50</p>
+                                        </div>
+                                        <!--WINGS-->
+                                        <!-- Look to putting sauces into a list or bulltes -->
+                                        <h3 class="ui-accordion-header ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-17" aria-controls="ui-id-18" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon ui-icon-triangle-1-e"></span>Wings</h3>
+                                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-18" aria-labelledby="ui-id-17" role="tabpanel1" aria-hidden="true" style="display:none;">
+                                            <p>Sauces: BBQ, Mild, Hot, Spicy Garalic, Spicy BBQ</p>
+                                            <p>12 Naked Chicks - $11.95<br>Our jumbo wings, naked and unbreaded. Cooked to perfection, served with ranch or blue cheese and a side of one of our sauces for dipping.</p>
+                                            <p>12 Saucy Chicks - $11.95<br>Our jumbo wings, unbreaded and tossed in your choice of sause. Cooked to perfection and served with ranch or blue cheese.</p>
+                                            <p>12 Golden Brown Chicks - $11.95<br>Our jumbo wings, mildly spiced and breaded. Cooked to perfection, served with ranch or blue cheese and a side of one of our sauces for dipping.</p>
+                                            <p>6 Chicks on a Platter - $9.95<br>Six of our jumbo wings, unbreaded and styled either naked or sacuy. Cooked to perfection, served with ranch or blue cheese and a side</p>
+                                        </div>
+                                        <!--SIDES-->
+                                        <h3 class="ui-accordion-header ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-id-19" aria-controls="ui-id-20" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon ui-icon-triangle-1-e"></span>Sides</h3>
+                                        <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-20" aria-labelledby="ui-id-19" role="tabpanel1" aria-hidden="true" style="display:none;">
+                                            <p>French Fries - $1.95<br>A side of golden brown french fries</p>
+                                            <p>Onion Rings - $1.95<br>A side of Granville's own hand breaded onion rings.</p>
+                                            <p>Coleslaw - $1.95<br>A side of Granvilles's own coleslaw.</p>
+                                            <p>Baked Beans - $1.95<br>A side of warm backed beans.</p>
+                                            <p>Green Beans - $1.95<br>A side of warm green beans</p>
+                                            <p>Macaroni and Cheese - $2.95<br>A side of warm macaroni and cheese.</p>
+                                            <p>Cheesy Fries - $3.00<br>A side of golden brown french fries topped with mozzarela cheese and bits of bacon.</p>
+                                            <p>Side Salad - $1.95<br>A side salad served with choice of dressing.</p>
+                                        </div>
+                                    </div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+                                    <h3>Stay In The Loop</h3>
+                                    <p>
+                                        Keep in touch and stay in the loop with what is happening at the Granville! Check us out on Twitter, Facebook, and Instagram!<br>
+                                    </p>
+                                    
+                                    <p>
+                                        Follow @granville_inn on Twitter!
+                                        <br><a class="twitter-timeline" href="https://twitter.com/granville_inn" data-widget-id="616611693322440704">Tweets by @granville_inn</a>
+                                    </p>
+                                        
+                                    <p>
+                                        Follow @granville_inn on Instagram!
+                                        <br><!-- SnapWidget -->
+                                    <iframe src="http://snapwidget.com/in/?u=Z3JhbnZpbGxlX2lubnxpbnwxMjV8M3wzfHxub3w1fG5vbmV8b25TdGFydHxub3x5ZXM=&ve=020715" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+                                    </p>
+                                    
+                                    
+									<h3>Other Things You May Want To Know</h3>
+									<p>
+                                        We want everyone to come and have a great time, but we also want everyone to be safe. Below are just a few things that may make your night a little more fun or may be helpful when you are trying to get home.
+                                    </p>
+									<div class="features">
+										<article>
+											<a href="https://www.uber.com/" class="image"><img src="img/Uber_logo.png" alt="" /></a>
+											<div class="inner">
+												<h4>Uber</h4>
+												<p>
+                                                    We want to make sure you get home safely, so do not drink and drive. Get an uber! If you have not already downloaded there mobile app follow this link!
+                                                </p>
+											</div>
+										</article>
+										<article>
+											<a href="http://touchtunes.com/experiences/mobile/" class="image"><img src="img/TouchTunes_Logo.jpg" alt="" /></a>
+											<div class="inner">
+												<h4>TouchTunes</h4>
+												<p>
+                                                    Want to hear your favorite song, but do not want to fight the crowd to get to the Jukebox? Download TouchTunes and you can play all the music your heart desires!
+                                                </p>
+											</div>
+										</article>
+										<article>
+											<a class="image"><img src="img/GoldenTee_logo.jpg" alt="" /></a>
+											<div class="inner">
+												<h4>Golden Tee Golf</h4>
+												<p>
+                                                    Think you have what it takes to beat the high scores on Golden Tee? Weel if you do, come enjoy some good food and cold beer while you play!
+                                                </p>
+											</div>
+										</article>
+                                        <article>
+											<a class="image"><img src="img/PoolTable01.jpg" alt="" /></a>
+											<div class="inner">
+												<h4>Pool</h4>
+												<p>
+                                                    Do I need to say more? See how long your winning streak will last as you and your friends grab a few beers and shoot some pool.
+                                                </p>
+											</div>
+										</article>
+									</div>
+								</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h3>Contact Us</h3>
+									<p>
+                                        The Granville Inn is located at:
+                                        <br></a><a class="image"><img src="img/Gville_FrontRight.jpg" alt="" /></a>
+                                        <br><b>1601 South Third Street<br>Louisville, KY 40208</b>
+                                    </p>
+                                    <p>
+                                        Want to put in a to-go order? Wondering if we will have the game your looking for?<br>Give us a call: <b>(502)636-2748</b>
+                                    </p>
+<!--
+                                    <p>
+                                        Interested in working at the Granville? Fill out the boxes below!
+                                    </p>
+									<form method="post" action="formToEmail.php" name="myEmailForm">
+										<div class="row uniform">
+											<div class="6u 12u(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
+											<div class="6u 12u(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+										</div>
+										<div class="row uniform">
+											<div class="12u">
+												<ul class="actions">
+													<li><input type="submit" class="special" value="Send Message" /></li>
+													<li><input type="reset" value="Reset Form" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+-->
+								</div>
+							</section>
+
+						<!-- Five -->
+						<!--
+							<section id="five">
+								<div class="container">
+									Extra section if needed
+								</div>
+							</section>
+						-->
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+                                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>&copy; Untitled. All rights reserved.</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.scrollzer.min.js"></script>
+			<script src="js/jquery.scrolly.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/util.js"></script>
+			<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
+			<script src="js/main.js"></script>
+
+            <!-- JS for accordion -->
+            <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+            <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+            <script>
+                $(function() {
+                    $( "#accordion" ).accordion({
+                        collapsible: true,
+                        active: false,
+                        heightStyle: "content",
+                        autoHeight: false
+                    });
+                });
+            </script>
+            <!--Twitter-->
+            <script>
+                !function(d,s,id)
+                {
+                    var js,
+                        fjs=d.getElementsByTagName(s)[0],
+                        p=/^http:/.test(d.location)?'http':'https';
+
+                    if(!d.getElementById(id))
+                    {
+                        js=d.createElement(s);
+                        js.id=id;
+                        js.src=p+"://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js,fjs);
+                    }
+                }(document,"script","twitter-wjs");
+            </script>
+            <!--SnapWidget-->
+            <script src="http://snapwidget.com/js/snapwidget.js"></script>
         
-        <div class="app">
-            <h1>Hello PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+	</body>
 </html>
